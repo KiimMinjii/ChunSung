@@ -23,6 +23,14 @@
         <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+        <!-- 헤더푸터 삽입 -->
+        <script>
+            $(function () {
+                $('#header').load('header.html');
+                $('#footer').load('footer.html');
+            });
+        </script>
+
         <!-- 타이틀 -->
         <title>카페, 천성</title>
     </head>
@@ -82,7 +90,7 @@
 
                     <div data-aos="fade-right" data-aos-delay="200" class="forU_img">
                         <a>
-                            <img alt="혜택3" src="/source/img/forU_3.jpg" />
+                            <img alt="혜택3" src="source/img/forU_3.jpg" />
                         </a>
                     </div>
 
@@ -174,12 +182,5 @@
 
         <!-- 푸터 -->
         <div id="footer"></div>
-
-        <script>
-            $(function () {
-                $('#header').load('header.html');
-                $('#footer').load('footer.html');
-            });
-        </script>
     </body>
 </html>
