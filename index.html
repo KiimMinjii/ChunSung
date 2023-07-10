@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- css -->
+        <link rel="stylesheet" href="css/index.css" />
+
+        <!-- owl.carousel -->
+        <link rel="stylesheet" href="css/owl.carousel.min.css" />
+        <script src="js/owl.carousel.min.js"></script>
+
+        <!-- aos  -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- jQuery -->
+        <script src="js/jquery-1.9.1.js"></script>
+
+        <!-- 타이틀 -->
+        <title>카페, 천성</title>
+    </head>
+    <body>
+        <!-- 전체 -->
+        <div class="con_main">
+            <!-- 배너 -->
+            <div class="banner_main">
+                <div class="owl-carousel">
+                    <div class="banner_img">
+                        <img src="source/img/banner_01.jpg" alt="#" />
+                    </div>
+                    <div class="banner_img">
+                        <img src="source/img/banner_02.jpg" alt="#" />
+                    </div>
+                    <div class="banner_img">
+                        <img src="source/img/banner_03.jpg" alt="#" />
+                    </div>
+                    <div class="banner_img">
+                        <img src="source/img/banner_04.jpg" alt="#" />
+                    </div>
+                </div>
+
+                <!-- 캐러셀 스크립트 -->
+                <script>
+                    var owl = $('.owl-carousel');
+                    owl.owlCarousel({
+                        items: 1,
+                        loop: true,
+                        margin: 0,
+                        autoplay: true,
+                        autoplayTimeout: 3000,
+                        autoplayHoverPause: true,
+                        dots: false,
+                    });
+                </script>
+            </div>
+            <!-- 배너 끝 -->
+
+            <!-- 컨텐츠 1 시작 -->
+            <div id="forU_main">
+                <div class="forU_main">
+                    <p class="f3">For U!</p>
+                </div>
+
+                <div class="forU_main">
+                    <div data-aos="fade-right" class="forU_img">
+                        <a>
+                            <img alt="혜택1" src="source/img/forU_1.jpg" />
+                        </a>
+                    </div>
+                    <div data-aos="fade-right" data-aos-delay="100" class="forU_img">
+                        <a>
+                            <img alt="혜택2" src="source/img/forU_2.jpg" />
+                        </a>
+                    </div>
+
+                    <div data-aos="fade-right" data-aos-delay="200" class="forU_img">
+                        <a>
+                            <img alt="혜택3" src="/source/img/forU_3.jpg" />
+                        </a>
+                    </div>
+
+                    <div data-aos="fade-right" data-aos-delay="300" class="forU_img">
+                        <a>
+                            <img alt="혜택4" src="source/img/forU_4.jpg" />
+                        </a>
+                    </div>
+
+                    <!-- aos 스크립트 -->
+                    <script>
+                        AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
+                    </script>
+                </div>
+            </div>
+            <!-- 컨텐츠1 끝 -->
+
+            <!-- 컨텐츠 2 시작 -->
+            <div id="announce_main">
+                <div class="owl-carousel">
+                    <!-- 2-1 -->
+                    <div class="ann_img ann_img_first">
+                        <div class="ann_word">
+                            <div class="ann_positon">
+                                <p class="f4">카페, 천성은?</p>
+                                <p class="f5">
+                                    카페 천성은 어떤 브랜드고, <br />
+                                    어떤 브랜드인지 궁금하신 가요?
+                                </p>
+                                <p class="f6"><a href="#"> 자세히 알아보기 ▶ </a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2-2 -->
+                    <div class="ann_img ann_img_snd">
+                        <div class="ann_word">
+                            <div class="ann_positon">
+                                <p class="f4">지금, 천성에서는?</p>
+                                <p class="f5">
+                                    다른 사람들의 이야기가 궁금하신가요? <br />
+                                    함께 이야기를 나누어보세요.
+                                </p>
+                                <p class="f6">
+                                    <a href="#"> 자세히 알아보기 ▶ </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 캐러셀 스크립트 -->
+                <script>
+                    var owl = $('.owl-carousel');
+                    owl.owlCarousel({
+                        items: 1,
+                        loop: true,
+                        margin: 0,
+                        autoplay: true,
+                        autoplayTimeout: 4000,
+                        autoplayHoverPause: true,
+                        dots: false,
+                    });
+                </script>
+            </div>
+            <!-- 컨텐츠 2 끝 -->
+
+            <!-- 컨텐츠 3 - 리뷰 시작 -->
+            <div id="review_main">
+                <div class="review_fro">
+                    <p class="f3">REVIEW</p>
+                    <p class="f7">누적 후기 1.2만개 | 평균 별점 ★★★★★ 4.9</p>
+                </div>
+
+                <!-- 이미지 -->
+                <div class="review_img"></div>
+
+                <!-- 버튼 -->
+                <div class="btn_box_main">
+                    <a>
+                        <button class="btn_main">
+                            <p class="f8">리뷰 더보기</p>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <!-- 컨텐츠 3 끝 -->
+        </div>
+    </body>
+</html>
