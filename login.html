@@ -3,10 +3,93 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>카페, 천성</title>
-
         <!-- css -->
         <link rel="stylesheet" href="css/login.css" />
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/sb-admin-2.css" />
+        <link rel="stylesheet" href="css/plugins/metisMenu/metisMenu.min.css" />
+
+        <!-- js -->
+        <script src="js/jquery-1.9.1.js"></script>
+
+        <!-- 헤더푸터 삽입 -->
+
+        <!-- 제목 -->
+        <title>카페, 천성</title>
     </head>
-    <body></body>
+    <body>
+        <!-- 페이지헤더 -->
+        <div class="page_header">
+            <div class="login_header">
+                <div class="name">
+                    <p class="comeText">로그인</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <div class="login-panel" style="margin-bottom: 150px">
+                        <form action="#" method="post" role="form" id="loginFrm">
+                            <fieldset>
+                                <div class="form-group mb-4">
+                                    <input
+                                        class="form-control"
+                                        placeholder="아이디"
+                                        id="id"
+                                        name="id"
+                                        type="text"
+                                        autofocus
+                                    />
+                                </div>
+                                <div class="form-group mb-4">
+                                    <input
+                                        class="form-control"
+                                        placeholder="비밀번호"
+                                        id="pw"
+                                        name="pw"
+                                        type="password"
+                                    />
+                                </div>
+                                <!-- Change this to a button or input when using this as a form -->
+                                <div class="form-group d-grid gap-2 mt-4">
+                                    <button
+                                        type="button"
+                                        class="btn btn-lg user-login-btn btn-block"
+                                        onclick="ajaxLoginCheck();"
+                                    >
+                                        <strong>Login</strong>
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="btn btn-lg user-join-btn btn-block"
+                                        onclick="location.href = '#'"
+                                    >
+                                        <strong>회원가입</strong>
+                                    </button>
+                                </div>
+
+                                <div class="form-group user-find">
+                                    <span><a href="#">아이디 찾기</a></span>
+                                    <span> &nbsp; | &nbsp;</span>
+                                    <span><a href="#">비밀번호 찾기</a></span>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 푸터 -->
+        <div id="footer"></div>
+        <script>
+            $(function () {
+                $('#header').load('header.html');
+                $('#footer').load('footer.html');
+            });
+        </script>
+    </body>
 </html>
