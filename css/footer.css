@@ -1,0 +1,117 @@
+/* 초기화 */
+@charset "utf=8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none !important;
+    word-break: keep-all;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 브랜드 로고 */
+.brand_logo > a > img {
+    width: 100px;
+    margin-bottom: 24px;
+}
+
+.brand_logo {
+    text-align: center;
+    margin-top: 16px;
+}
+
+/* 본문 */
+footer {
+    width: 100%;
+    min-height: 210px;
+    background-color: #011e41;
+    padding: 30px 0px 30px 0px;
+}
+
+#contain_foot {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0px 16px 0px 16px !important;
+}
+
+#scnd_foot {
+    clear: both;
+}
+
+/* 폰트 */
+.company_foot,
+.Center_ann_foot {
+    color: #d0d4e0 !important;
+    font-size: 14px;
+    text-align: center;
+}
+
+.Center_ann_foot {
+    margin-bottom: 1rem;
+}
+
+.Center_foot {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 20px 0px 0px 0px !important;
+    text-align: center;
+    color: #fff !important;
+}
+
+thin {
+    font-size: 12px;
+}
+
+/* sns 로고 */
+
+.sns_logo {
+    text-align: center;
+}
+
+.sns > a > img {
+    width: 20px;
+    margin-left: 16px;
+    margin-bottom: 20px;
+}
+
+/* 미디어 쿼리 */
+@media (min-width: 1440px) {
+    #contain_foot {
+        padding: 0px !important;
+    }
+
+    .company_foot,
+    .Center_ann_foot {
+        text-align: left;
+    }
+
+    .Center_foot {
+        text-align: left;
+    }
+
+    .brand_logo {
+        float: left;
+    }
+
+    .brand_logo > a > img {
+        margin-bottom: 10px;
+    }
+
+    .sns_logo {
+        float: right;
+        margin-top: 16px;
+    }
+}
+
+/* top 버튼 */
+
+#MOVE_TOP_BTN {
+    position: fixed;
+    right: 22px !important;
+    bottom: 90px !important;
+    display: none;
+    z-index: 999;
+}

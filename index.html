@@ -4,8 +4,16 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <!-- 폰트 -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200&display=swap"
+            rel="stylesheet"
+        />
+
         <!-- css -->
         <link rel="stylesheet" href="css/index.css" />
+        <!-- jQuery -->
+        <script src="js/jquery-1.9.1.js"></script>
 
         <!-- owl.carousel -->
         <link rel="stylesheet" href="css/owl.carousel.min.css" />
@@ -14,9 +22,6 @@
         <!-- aos  -->
         <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-        <!-- jQuery -->
-        <script src="js/jquery-1.9.1.js"></script>
 
         <!-- 타이틀 -->
         <title>카페, 천성</title>
@@ -166,5 +171,15 @@
             </div>
             <!-- 컨텐츠 3 끝 -->
         </div>
+
+        <!-- 푸터 -->
+        <div id="footer"></div>
+
+        <script>
+            $(function () {
+                $('#header').load('header.html');
+                $('#footer').load('footer.html');
+            });
+        </script>
     </body>
 </html>
