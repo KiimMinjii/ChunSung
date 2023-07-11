@@ -50,6 +50,7 @@ a {
 .forU_main {
     max-width: 1440px;
     margin: 0 auto;
+    padding-bottom: 20px;
 }
 
 .forU_img {
@@ -69,7 +70,7 @@ a {
 .f3 {
     font-size: 24px;
     font-weight: 700;
-    padding: 120px 0px 0px 0px;
+    padding: 60px 0px 0px 0px;
     text-align: center;
     color: #011e41;
     margin-bottom: 10px !important;
