@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- js -->
+        <script src="js/jquery-1.9.1.js"></script>
+
+        <!-- css -->
+        <link rel="stylesheet" href="css/login.css" />
+        <link rel="stylesheet" href="css/bootstrap.css" />
+
+        <title>카페, 천성</title>
+    </head>
+    <body>
+        <!-- 페이지 헤더 -->
+
+        <div class="page_header">
+            <div class="userC_header">
+                <div class="name">
+                    <p class="comeText">회원가입</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 수정용 -->
+        <div id="wrap">
+            <div id="container">
+                <!-- 메인 -->
+
+                <div id="main">
+                    <form id="joinFrm" method="post" action="${context}/work/user/createUser.do" role="form">
+                        <!-- 아이디 -->
+                        <div class="q1 form-group">
+                            <label for="id" class="control-label"><b id="naming">아이디</b></label>
+                            <div class="box">
+                                <input
+                                    class="form-control"
+                                    type="text"
+                                    name="id"
+                                    id="id"
+                                    required="required"
+                                    autofocus="autofocus"
+                                    autocomplete="off"
+                                    placeholder="8~16자리로 입력하세요."
+                                    onkeyup="idCheck();"
+                                />
+                            </div>
+                            <p id="message"></p>
+                        </div>
+
+                        <!-- 비밀번호 -->
+                        <div class="q1 form-group">
+                            <label for="pw" class="control-label"><b id="naming">비밀번호</b></label>
+                            <div class="box">
+                                <input
+                                    class="form-control"
+                                    type="password"
+                                    name="pw"
+                                    id="pw"
+                                    required="required"
+                                    placeholder="8자리 이상 입력해주세요."
+                                />
+                            </div>
+                        </div>
+
+                        <!-- 이메일 -->
+                        <div class="q1 form-group">
+                            <label for="email" class="control-label"><b id="naming">이메일</b></label>
+                            <div class="box">
+                                <input
+                                    class="form-control"
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    required="required"
+                                    autocomplete="on"
+                                    placeholder="이메일을 입력해주세요."
+                                />
+                            </div>
+                        </div>
+
+                        <!-- 이름 -->
+                        <div class="q1 form-group">
+                            <label for="name" class="control-label"><b id="naming">성명</b></label>
+                            <div class="box">
+                                <input
+                                    class="form-control"
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    autofocus="autofocus"
+                                    required="required"
+                                    autocomplete="off"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- 생년월일 -->
+                        <div class="q1 form-group">
+                            <label for="birth" class="control-label"><b id="naming">생년월일</b></label>
+                            <div class="box">
+                                <input
+                                    class="form-control"
+                                    type="text"
+                                    id="birth"
+                                    name="birth"
+                                    required="required"
+                                    maxlength="10"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- 전화번호 -->
+                        <div class="q1 form-group">
+                            <label for="phoneCd" class="control-label"><b id="naming">연락처</b></label>
+                            <p id="nameTag"></p>
+                            <div class="box_tel">
+                                <select class="form-control" id="phoneCd" name="phoneCd">
+                                    <c:forEach items="${dsCode1}" var="code1">
+                                        <option value="${code1.commCd}">${code1.commCdNm}</option>
+                                    </c:forEach>
+                                </select>
+                            </div>
+                            -
+                            <!-- 앞자리 -->
+                            <div class="box_tel">
+                                <label></label>
+                                <input
+                                    class="form-control"
+                                    type="text"
+                                    id="phone1"
+                                    maxlength="4"
+                                    required="required"
+                                    onkeydown="return fn_showKeyCode(event)"
+                                    placeholder="3-4자리"
+                                />
+                            </div>
+
+                            -
+                            <!-- 뒷자리 -->
+                            <div class="box_tel">
+                                <label></label>
+                                <input
+                                    class="form-control"
+                                    type="text"
+                                    id="phone2"
+                                    maxlength="4"
+                                    required="required"
+                                    onkeydown="return fn_showKeyCode(event)"
+                                    placeholder="4자리"
+                                />
+                            </div>
+                            <input type="hidden" id="phoneNum" name="phoneNum" />
+                        </div>
+
+                        <label></label>
+
+                        <!-- 주소 -->
+                        <div class="q1 form-group">
+                            <!-- 	                	<div id="nameTag"></div> -->
+
+                            <!-- 우편번호 -->
+                            <div class="form-group box2">
+                                <label for="postnum1" class="control-label"><b id="naming">주소</b></label>
+                                <p id="nameTag"></p>
+                                <div class="find_add">
+                                    <input
+                                        class="form-control"
+                                        type="text"
+                                        id="postNum1"
+                                        placeholder="우편번호"
+                                        disabled="disabled"
+                                    />
+                                </div>
+
+                                <!-- 우편번호 찾기 -->
+                                <div class="find_btn2">
+                                    <label class="control-label"><b></b></label>
+                                    <div class="find_btn2">
+                                        <input
+                                            type="button"
+                                            class="btn user-post-btn find_btn"
+                                            onclick="sample4_execDaumPostcode()"
+                                            value="우편번호 찾기"
+                                        />
+                                    </div>
+                                    <input type="hidden" id="postNum" name="postNum" />
+                                </div>
+                            </div>
+
+                            <!-- 도로명주소 -->
+                            <div class="form-group box2">
+                                <label for="postnum2" class="control-label add_label"></label>
+                                <div>
+                                    <input
+                                        class="form-control"
+                                        type="text"
+                                        id="postNum2"
+                                        placeholder="도로명주소"
+                                        disabled="disabled"
+                                    />
+                                </div>
+                                <!--  <input type="hidden" id="postNum" name="postNum"> -->
+                            </div>
+
+                            <!-- 지번주소 -->
+                            <div class="form-group box2">
+                                <label for="postnum3" class="control-label add_label"></label>
+                                <div>
+                                    <input
+                                        class="form-control"
+                                        type="text"
+                                        id="postNum3"
+                                        placeholder="지번주소"
+                                        disabled="disabled"
+                                    />
+                                </div>
+                            </div>
+
+                            <!-- 상세 주소 -->
+                            <div class="form-group box2">
+                                <label for="address1" class="control-label col-md-3"></label>
+                                <div>
+                                    <input class="form-control" type="text" id="address1" placeholder="상세주소" />
+                                </div>
+                                <input type="hidden" id="address" name="address" />
+                            </div>
+                        </div>
+
+                        <!-- 버튼 -->
+                        <div class="q1 form-group">
+                            <div class="btn_box">
+                                <button type="button" class="btn user-back-btn" onclick="fn_back()">
+                                    <p class="btn_text">뒤로가기</p>
+                                </button>
+                                <button
+                                    class="btn user-submit-btn"
+                                    type="button"
+                                    name="btnSubmit"
+                                    id="btnSubmit"
+                                    onclick="fn_save()"
+                                >
+                                    <p class="btn_text">가입하기</p>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

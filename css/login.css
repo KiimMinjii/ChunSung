@@ -121,17 +121,18 @@
 }
 
 .user-login-btn {
-    background-color: black !important;
+    background-color: #011e41 !important;
     height: 50px !important;
     color: #fff !important;
     font-size: 16px !important;
 }
 
 .user-login-btn:hover {
-    background-color: #011e41 !important;
+    background-color: #00132b !important;
     height: 50px !important;
     color: #e6eaec !important;
     font-size: 16px !important;
+    border: 1px solid #011e41 !important;
 }
 
 .user-kakao-btn {
@@ -148,17 +149,17 @@
 .user-join-btn {
     background-color: #fff !important;
     height: 50px !important;
-    color: #000 !important;
+    color: #011e41 !important;
     font-size: 16px !important;
-    border: 1px solid #000 !important;
+    border: 1px solid #011e41 !important;
 }
 
 .user-join-btn:hover {
-    background-color: #011e41 !important;
+    background-color: #e6eaec !important;
     height: 50px !important;
-    color: #e6eaec !important;
+    color: #011e41 !important;
     font-size: 16px !important;
-    border: 1px solid #434447 !important;
+    border: 1px solid #011e41 !important;
 }
 
 /* 아이디찾기/비밀번호찾기 */
