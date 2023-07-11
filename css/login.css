@@ -1,13 +1,14 @@
-@charset "utf-8";
+@charset "utf=8";
+/* 폰트 -나눔바른고딕 */
+@import url('https://webfontworld.github.io/naver/NanumBarunGothic.css');
 
-/* 초기화 */
 * {
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
     word-break: keep-all;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'NanumBarunGothic', sans-serif;
 }
 
 /* 페이지 헤더 */

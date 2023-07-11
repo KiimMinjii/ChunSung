@@ -1,8 +1,6 @@
-/* 초기화 */
 @charset "utf=8";
-
-/* 폰트-NOTO SNAS KR */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* 폰트 -나눔바른고딕 */
+@import url('https://webfontworld.github.io/naver/NanumBarunGothic.css');
 
 * {
     margin: 0;
@@ -10,7 +8,7 @@
     list-style: none;
     text-decoration: none;
     word-break: keep-all;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'NanumBarunGothic', sans-serif;
 }
 
 /* --------------------------------------------- */
